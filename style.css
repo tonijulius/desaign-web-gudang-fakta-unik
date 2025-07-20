@@ -18,10 +18,19 @@ h1 {
     border-radius: 80px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
+     /* Tengah halaman */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .filter-buttons {
     margin-bottom: 30px;
+    /* Tengah halaman */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .filter-buttons button {
