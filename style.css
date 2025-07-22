@@ -24,6 +24,7 @@ h1 {
     margin-right: auto;
 }
 
+
 .filter-buttons {
     margin-bottom: 30px;
     /* Tengah halaman */
@@ -85,4 +86,24 @@ h1 {
 .card p {
     color: #555;
     line-height: 1.6;
+}
+
+.fav-button {
+  margin-top: 10px;
+  background-color: gold;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fav-button:hover {
+  background-color: darkorange;
+}
+
+.favoritesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px
 }

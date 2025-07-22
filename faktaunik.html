@@ -8,7 +8,6 @@
 </head>
 <body>
     <h1>Fakta Unik Dunia</h1>
-    
     <input type="text" id="searchInput" placeholder="Cari fakta..." oninput="searchFacts()">
    
     <div class="filter-buttons">
@@ -16,6 +15,7 @@
         <button onclick="filterFacts('hewan')">Hewan</button>
         <button onclick="filterFacts('angkasa')">Luar Angkasa</button>
         <button onclick="filterFacts('tanaman')">Tanaman</button>
+        <button onclick="showFavorites()">Lihat favorit</button>
     </div>
 
     <div class="cards-container">
@@ -24,6 +24,7 @@
             <div class="content">
                 <h2>Luar Angkasa Diam Total</h2>
                 <p>Tidak ada suara di luar angkasa karena tidak ada udara untuk menghantarkan gelombang suara.</p>
+                <button class="fav-button" onclick="saveToFavorites(this)">Simpan</button>
             </div>
         </div>
 
@@ -32,6 +33,7 @@
             <div class="content">
                 <h2>Gurita Punya Tiga Hati</h2>
                 <p>Gurita memiliki tiga hati dan darah berwarna biru karena kandungan tembaga.</p>
+                <button class="fav-button" onclick="saveToFavorites(this)">Simpan</button>
             </div>
         </div>
 
@@ -40,10 +42,13 @@
             <div class="content">
                 <h2>Rasa Dingin Daun Mint</h2>
                 <p>Daun mint tidaklah benar-benar dingin. Karena ia memiliki senyawa alami mentol yang bisa mengaktifkan reseptor TRPM8 di lidah, sehingga otak kita mengira kalau mulut kita sedang dalam kondisi dingin.</p>
+                <button class="fav-button" onclick="saveToFavorites(this)">Simpan</button>
             </div>
         </div>
     </div>
-
+    
+    <div id="favoritesContainer"></div>
+    
     <script src="script.js"></script>
 </body>
 </html>
