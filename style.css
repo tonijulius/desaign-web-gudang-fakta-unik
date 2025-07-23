@@ -101,9 +101,32 @@ h1 {
   background-color: darkorange;
 }
 
-.favoritesContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px
+#favoritesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* beri jarak antar fakta */
+  margin-top: 40px;
+  padding: 20px;
+}
+
+#favoritesContainer h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#favoritesContainer .card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  cursor: pointer; /* biar kelihatan bisa diklik */
+  transition: transform 0.2s;
+}
+
+#favoritesContainer .card:hover {
+  transform: scale(1.03);
 }
