@@ -26,12 +26,12 @@ function applyFilters() {
   });
 }
 
-function saveToFavorites(button) {
+function saveToFavorites(button, factId) {
   const card = button.closest('.card');
   const title = card.querySelector('h2').innerText;
   const desc = card.querySelector('p').innerText;
 
-  const data = { title, desc };
+  const data = { title, desc, id: factId };
 
   let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 
@@ -65,6 +65,14 @@ function showFavorites() {
         <p>${fav.desc}</p>
       </div>
     `;
+    favCard.addEventListener('click', () => {
+      const target = document.getElementById(fav.id);
+      if (target) {
+        target.scrollIntoView({behavior: 'smooth'});
+        target.style.outline ='7px solid black';
+        setTimeout(() => target.style.outline = 'none', 2000);
+      }
+    });
     favoritesContainer.appendChild(favCard);
   });
 
