@@ -147,3 +147,60 @@ h1 {
     transform: translateY(0) scale(1);
   }
 }
+
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode p {
+  color: #f0f0f0;
+}
+
+.dark-mode .card {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode #searchInput {
+  background-color: #333;
+  color: #f0f0f0;
+  border: 1px solid #555;
+}
+
+.dark-mode .filter-buttons button {
+  background-color: #444;
+}
+
+.dark-mode .filter-buttons button:hover {
+  background-color: #666;
+}
+
+.dark-mode .card-content button {
+  background-color: #888;
+  color: white;
+}
+
+.dark-mode .card-content button:hover {
+  background-color: #aaa;
+}
+
+#darkToggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dark-mode #darkToggle {
+  background-color: #999;
+  color: black;
+}

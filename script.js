@@ -1,3 +1,14 @@
+// Cek preferensi dark mode sebelumnya
+window.addEventListener('DOMContentLoaded', () => {
+  const darkPref = localStorage.getItem('darkMode');
+  if (darkPref === 'enabled') {
+    document.body.classList.add('dark-mode');
+    if (toggleButton) toggleButton.innerText = '☀️ Light Mode';
+  } else {
+    if (toggleButton) toggleButton.innerText = '🌙 Dark Mode';
+  }
+});
+
 let currentCategory = 'all';
 
 function filterFacts(category) {
@@ -82,3 +93,10 @@ function showFavorites() {
   });
 }
 
+function toggleDarkMode() {
+  const body = document.body;
+  const toggleButton = document.getElementById('darkToggle');
+  const isDark = document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+  toggleButton.innerText = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+}
